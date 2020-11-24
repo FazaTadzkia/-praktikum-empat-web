@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>chatan sama kamu</title>
+</head>
+<body>
+    <div id="box" style="width: 100%; stroke: rgb(175, 72, 72);">
+    </div>
+    <form method="request" onsubmit="return send();">
+        <input id="in" type="text" name="in">
+        <button type="submit" onclick="return send();"> KIRIM</button>
+    </form>
+</body>
+<script type="text/javascript">
+    function send() {
+        let pesan = document.getElementById("in").value;
+        document.getElementById("box").innerHTML += pesan + "<br/>";
+        document.getElementById("in").value = "";
+        return false;
+    }
+</script>
+</html>
